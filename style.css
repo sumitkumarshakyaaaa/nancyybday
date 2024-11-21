@@ -1,0 +1,133 @@
+ @import url("https://fonts.googleapis.com/css2?family=Caveat");
+
+ body {
+     background: black;
+     color: white;
+     overflow: hidden;
+     font-family: 'Caveat', serif;
+ }
+
+ .Container {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+ }
+
+ .Picture {
+     display: inline-block;
+     position: absolute;
+     top: 0;
+     left: 0;
+     border: 5px solid #fff;
+     border-radius: 3px;
+     background: #fff;
+     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+     transform: translate(-50%, -50%);
+     user-select: none;
+     cursor: pointer;
+ }
+ .Picture-video {
+     display: inline-block;
+     position: absolute;
+     top: 0;
+     left: 0;
+     border: 5px solid #fff;
+     border-radius: 3px;
+     background: #fff;
+     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+     transform: translate(-50%, -50%);
+     user-select: none;
+     cursor: pointer;
+ }
+ .Picture-img {
+     display: block;
+     width: 300px;
+     height: 300px;
+     pointer-events: none;
+     transition: all 0.3s ease-in-out;
+ }
+ .Picture-img:hover {
+     box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Glow effect on hover */
+     animation: glow 1.5s infinite;
+ }
+
+ @keyframes glow {
+     0% {
+         box-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+     }
+     50% {
+         box-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 0.5);
+     }
+     100% {
+         box-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+     }
+ }
+
+ .Picture-note {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 300px;
+     height: 70px;
+     padding: 12px 24px;
+     font-size: 1.5rem;
+     text-align: center;
+     color: black; /* Ensure text color is visible */
+     font-family: 'Caveat', 'Segoe UI Emoji', sans-serif; /* Add fallback font for emojis */
+ }
+ .Picture-note-video {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 300px;
+     height: 70px;
+     padding: 12px 24px;
+     font-size: 1.5rem;
+     text-align: center;
+     color: black; /* Ensure text color is visible */
+     font-family: 'Caveat', 'Segoe UI Emoji', sans-serif; /* Add fallback font for emojis */
+ }
+
+ .Network {
+     display: inline-block;
+     padding: 0 5px;
+ }
+ .Network-video {
+     display: inline-block;
+     padding: 0 5px;
+ }
+
+ .Network img {
+     width: 1.5rem;
+     aspect-ratio: 1 / 1;
+     vertical-align: middle;
+ }
+
+ .Network-video img {
+     width: 1.5rem;
+     aspect-ratio: 1 / 1;
+     vertical-align: middle;
+ }
+
+ * {
+     box-sizing: border-box;
+ }
+
+ /* Starry Background Animation */
+ @keyframes blink {
+     0%, 100% {
+         opacity: 0.8;
+     }
+     50% {
+         opacity: 1;
+     }
+ }
+
+ .star {
+     position: absolute;
+     width: 2px;
+     height: 2px;
+     background: white;
+     opacity: 0.8;
+     animation: blink 1.5s infinite ease-in-out;
+ }
